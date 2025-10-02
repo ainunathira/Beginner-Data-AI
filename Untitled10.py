@@ -1,27 +1,18 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
+Task
+# Hello Data
 def main():
     print("Hello Data & AI!")
 
 if __name__ == "__main__":
     main()
-
-
-# In[3]:
-
-
+#Basic List & Loop
 numbers = [2, 4, 6, 8, 10]
 
 for num in numbers:
     print(num * 2)
 
 
-# In[4]:
-
+#Dictionary Practice
 
 transaction = {
     "Customer": "A001",
@@ -34,8 +25,7 @@ total_cost = transaction["Quantity"] * transaction["Price"]
 print("Total Cost:", total_cost)
 
 
-# In[11]:
-
+# Simple Data Analysis with Pandas
 
 import pandas as pd
 
@@ -68,8 +58,7 @@ best_selling_product = df.groupby("Product")["Quantity"].sum().idxmax()
 print("Best Selling Product:", best_selling_product)
 
 
-# In[12]:
-
+# Visualization
 
 # sales_visualization.py
 import pandas as pd
@@ -87,8 +76,6 @@ plt.ylabel("Quantity")
 plt.xticks(rotation=45)  # rotate product names for better readability
 plt.tight_layout()
 plt.show()
-
-
 # In[ ]:
 
 
