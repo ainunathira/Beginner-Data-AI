@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[13]:
-
-
 # Data Cleaning for Missing Values
 import pandas as pd
 
@@ -23,7 +17,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Show rows with missing values BEFORE cleaning
-print("🔎 Rows with missing values BEFORE cleaning:\n")
+print("Rows with missing values BEFORE cleaning:\n")
 print(df[df["Age"].isna() | df["Product"].isna()])
 
 # Cleaning Step
@@ -34,14 +28,10 @@ df["Age"].fillna(avg_age, inplace=True)
 df["Product"].fillna(most_common_product, inplace=True)
 
 # rows AFTER cleaning
-print("\n✅ Rows AFTER cleaning:\n")
+print("\n Rows AFTER cleaning:\n")
 print(df.loc[[5, 10]])  # rows that had missing values
 
 df.to_excel("supermarket_sales_cleaned.xlsx", index=False)
-
-
-# In[14]:
-
 
 # Data Visualization
 import pandas as pd
@@ -75,10 +65,6 @@ plt.xlabel("Gender")
 plt.ylabel("Total Spending")
 plt.show()
 
-
-# In[16]:
-
-
 # Data Analysis
 import pandas as pd
 
@@ -103,10 +89,3 @@ gender_spending = df.groupby("Customer")["Total"].sum()
 top_gender = gender_spending.idxmax()
 top_gender_spent = gender_spending.max()
 print(f"Gender that spends more: {top_gender} (Total: {top_gender_spent:.2f})")
-
-
-# In[ ]:
-
-
-
-
